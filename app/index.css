@@ -18,6 +18,10 @@ li {
     list-style-type: none;
 }
 
+a {
+    color: orange;
+}
+
 .card {
     background: #FFF;
     box-shadow: 0 1px 1px rgba(0,0,0,0.3);
@@ -71,4 +75,47 @@ li {
 .popular-rank {
     font-size: 20px;
     margin: 10px;
+}
+
+.nav {
+    display: flex;
+}
+
+.nav li {
+    margin-right: 15px;
+}
+
+.active {
+    font-weight: 700;
+}
+
+.home-contaier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    display: inline-block;
+    height: 40px;
+    line-height: 38px;
+    padding: 0 30px;
+    background: #fff;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    border: 1px solid white;
+    text-decoration: none
+}
+
+.button:hover:enabled {
+    background: linear-gradient(#1a1a1a, #0a0a0a);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.button:active {
+    transform: translateY(1px);
 }
