@@ -1,8 +1,5 @@
 const React = require('react');
 
-// To render an anchor tag
-const Link = require('react-router-dom').Link;
-
 // Used to change style of Nav link based on whether a route is active
 // Composes Link and adds some extra properties
 const NavLink = require('react-router-dom').NavLink;

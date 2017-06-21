@@ -1,23 +1,26 @@
 const React = require('react');
-const PropTypes = require('prop-types');
-const Popular = require('./Popular');
 const ReactRouter = require('react-router-dom');
 const Router = ReactRouter.BrowserRouter;
+const Switch = ReactRouter.Switch;
 
 // change to ReactRouter.HashRouter
 // things changed in v4 of Router
 const Route = ReactRouter.Router;
+const Popular = require('./Popular');
 const Nav = require('./Nav');
 const Home = require('./Home');
 
 class App extends React.Component {
     render() {
         return (
-            <Router>
+            <Router history={{}}>
                 <div className='container'>
                     <Nav />
-                    <Route path='/' component={Home} />
-                    <Route path='/popular' component={Popular} />
+                    <Switch>
+                        <Route path='/' component={Home} />
+                        <Route path='/popular' component={Popular} />
+                        <Route render={ () => <p>Not Found</p> }/>
+                    </Switch>
                 </div>
             </Router>
         );
