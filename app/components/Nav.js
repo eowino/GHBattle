@@ -8,11 +8,9 @@ const NavLink = require('react-router-dom').NavLink;
 function Nav() {
     return (
         <ul className="nav">
-            <li>
-                <NavLink exact activeClassName='active' to='/'>Home</NavLink>
-                <NavLink activeClassName='active' to='/battle'>Battle</NavLink>
-                <NavLink activeClassName='active' to='/popular'>Popular</NavLink>
-            </li>
+            <li><h2><NavLink exact activeClassName='active' to='/'>Home</NavLink></h2></li>
+            <li><h2><NavLink activeClassName='active' to='/battle'>Battle</NavLink></h2></li>
+            <li><h2><NavLink activeClassName='active' to='/popular'>Popular</NavLink></h2></li>
         </ul>
     )
 }

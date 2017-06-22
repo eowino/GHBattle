@@ -20,6 +20,7 @@ li {
 
 a {
     color: orange;
+    text-decoration: none;
 }
 
 .card {
@@ -83,13 +84,15 @@ a {
 
 .nav li {
     margin-right: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .active {
     font-weight: 700;
 }
 
-.home-contaier {
+.home-container {
     display: flex;
     flex-direction: column;
     align-items: center;

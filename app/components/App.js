@@ -5,19 +5,21 @@ const Switch = ReactRouter.Switch;
 
 // change to ReactRouter.HashRouter
 // things changed in v4 of Router
-const Route = ReactRouter.Router;
+const Route = ReactRouter.Route;
 const Popular = require('./Popular');
 const Nav = require('./Nav');
 const Home = require('./Home');
+const Battle = require('./Battle');
 
 class App extends React.Component {
     render() {
         return (
-            <Router history={{}}>
+            <Router>
                 <div className='container'>
                     <Nav />
                     <Switch>
-                        <Route path='/' component={Home} />
+                        <Route exact path='/' component={Home} />
+                        <Route exact path='/battle' component={Battle} />
                         <Route path='/popular' component={Popular} />
                         <Route render={ () => <p>Not Found</p> }/>
                     </Switch>
@@ -29,3 +31,4 @@ class App extends React.Component {
 
 
 module.exports = App;
+
