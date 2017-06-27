@@ -40,16 +40,18 @@ function RepoGrid({ repos }) {
                     <li key={repo.name} className="popular-item">
                         <div className="popular-rank">#{index + 1}</div>
                         <ul className="space-list-items">
-                            <li>
-                                <img 
-                                    className="avatar"
-                                    src={repo.owner.avatar_url} 
-                                    alt={`Avatar for ${repo.owner.login}`}
-                                />
-                            </li>
-                            <li><a target="_blank" href={repo.html_url}>{repo.name}</a></li>
-                            <li>@{repo.owner.login}</li>
-                            <li>{repo.stargazers_count} stars</li>
+                            <a target="_blank" href={repo.html_url}>
+                                <li>
+                                    <img 
+                                        className="avatar"
+                                        src={repo.owner.avatar_url} 
+                                        alt={`Avatar for ${repo.owner.login}`}
+                                    />
+                                </li>
+                                <li>{repo.name}</li>
+                                <li className="info">@{repo.owner.login}</li>
+                                <li className="info">{repo.stargazers_count} stars</li>
+                            </a>
                         </ul>
                     </li>
                 )

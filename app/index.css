@@ -178,3 +178,7 @@ a {
 .reset:hover {
   cursor: pointer;
 }
+
+.info {
+  color: #000;
+}
