@@ -9,7 +9,7 @@ const Loading = require('./Loading');
 function SelectLanguage({ selectedLanguage, onSelect }) {
     const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
     const styles = {
-        'borderBottom': '3px double orange'
+        'borderBottom': '3px double #FFF'
     };
 
     return (
